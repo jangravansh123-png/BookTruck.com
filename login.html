@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BookTruck | Login or Sign Up</title>
+<style>
+:root{--navy:#10233f;--blue:#2457d6;--gold:#ffbd45;--bg:#f4f7fb;--text:#17243a;--muted:#68758a;--border:#dfe6f0}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:linear-gradient(135deg,#edf3ff 0%,#f8fafc 55%,#fff5df 100%);color:var(--text);display:flex;flex-direction:column}
+header{padding:20px max(20px,calc((100% - 1100px)/2));display:flex;align-items:center;justify-content:space-between;gap:14px}
+.brand{display:flex;align-items:center;gap:11px;color:var(--navy);text-decoration:none;font-weight:850;font-size:21px}
+.logo{height:42px;width:42px;border-radius:13px;background:var(--gold);display:grid;place-items:center;font-size:23px;font-weight:900}
+.home{color:var(--blue);text-decoration:none;font-size:14px;font-weight:750}
+main{width:min(100% - 32px,950px);margin:25px auto 44px;display:grid;grid-template-columns: .9fr 1.1fr;background:white;border:1px solid #e4eaf2;border-radius:24px;overflow:hidden;box-shadow:0 22px 65px #19365c12;min-height:600px}
+.intro{background:var(--navy);color:white;padding:44px 34px;display:flex;flex-direction:column;justify-content:space-between}
+.intro h1{font-size:clamp(28px,4vw,39px);line-height:1.13;letter-spacing:-1px;margin:0 0 14px}
+.intro p{color:#cbd7e9;line-height:1.7;font-size:14px;margin:0}
+.features{display:grid;gap:13px;margin-top:35px}
+.feature{display:flex;gap:11px;align-items:center;color:#e8effa;font-size:13px}
+.check{width:26px;height:26px;display:grid;place-items:center;border-radius:8px;background:#263e60;color:var(--gold);font-weight:900}
+.intro-foot{font-size:12px;color:#9eb0c9;margin-top:45px}
+.content{padding:38px clamp(22px,4vw,44px);display:flex;flex-direction:column;justify-content:center}
+.eyebrow{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;font-weight:850;color:var(--blue)}
+h2{font-size:27px;letter-spacing:-.7px;margin:8px 0 7px}
+.lead{font-size:13px;color:var(--muted);line-height:1.6;margin:0 0 22px}
+.roles{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+.role{position:relative;border:1.5px solid var(--border);border-radius:14px;background:white;padding:16px 13px;text-align:left;cursor:pointer;color:var(--text);transition:.15s}
+.role:hover{border-color:#9aafe9}
+.role.selected{border-color:var(--blue);background:#f3f6ff;box-shadow:0 0 0 3px #2457d610}
+.role .emoji{font-size:25px;display:block;margin-bottom:10px}
+.role strong{font-size:14px;display:block}
+.role small{font-size:11px;color:var(--muted);display:block;margin-top:5px;line-height:1.4}
+.role .radio{position:absolute;right:12px;top:12px;width:17px;height:17px;border:1.5px solid #c4cede;border-radius:50%}
+.role.selected .radio{border:5px solid var(--blue)}
+.tabs{display:flex;border-bottom:1px solid var(--border);gap:22px;margin-bottom:20px}
+.tab{border:0;background:transparent;color:var(--muted);font-weight:750;padding:0 0 12px;cursor:pointer;font-size:14px;border-bottom:2px solid transparent}
+.tab.active{color:var(--blue);border-color:var(--blue)}
+.form{display:grid;gap:14px}
+.field{display:grid;gap:7px}
+label{font-size:12px;font-weight:750;color:#38465c}
+input{width:100%;border:1px solid #dce3ee;border-radius:10px;padding:12px 13px;font:inherit;font-size:14px;outline:none;background:#fff}
+input:focus{border-color:var(--blue);box-shadow:0 0 0 3px #2457d615}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.primary{border:0;border-radius:11px;padding:13px 16px;background:var(--blue);color:white;font-weight:800;font-size:14px;cursor:pointer;margin-top:3px}
+.primary:hover{background:#1b46b8}
+.terms{font-size:11px;color:var(--muted);line-height:1.5;margin:0}
+.message{display:none;border-radius:10px;padding:11px 12px;font-size:12px;line-height:1.5;background:#fff4dc;color:#805400}
+.message.show{display:block}
+.role-note{font-size:11px;color:var(--muted);margin:-12px 0 18px}
+footer{text-align:center;color:#7b8799;font-size:12px;padding:0 15px 22px}
+@media(max-width:720px){main{grid-template-columns:1fr;margin-top:8px}.intro{padding:27px 25px}.intro h1{font-size:29px}.features,.intro-foot{display:none}.content{padding:29px 23px}header{padding:15px 18px}}
+@media(max-width:400px){.roles{gap:8px}.role{padding:13px 10px}.grid2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html"><span class="logo">B</span><span>BookTruck</span></a>
+  <a class="home" href="index.html">← Back to home</a>
+</header>
+<main>
+  <section class="intro">
+    <div>
+      <div style="color:#ffbd45;font-weight:850;font-size:12px;letter-spacing:1.5px;margin-bottom:20px">YOUR LOGISTICS PARTNER</div>
+      <h1>Move goods.<br>Move forward.</h1>
+      <p>One platform for customers who need transport and drivers ready to deliver.</p>
+      <div class="features">
+        <div class="feature"><span class="check">✓</span><span>Book and manage deliveries</span></div>
+        <div class="feature"><span class="check">✓</span><span>Track delivery progress</span></div>
+        <div class="feature"><span class="check">✓</span><span>Manage driver requests</span></div>
+      </div>
+    </div>
+    <div class="intro-foot">BookTruck · Transport made simpler</div>
+  </section>
+
+  <section class="content">
+    <div class="eyebrow">Get started</div>
+    <h2 id="heading">Choose your account</h2>
+    <p class="lead" id="lead">First, tell us how you want to use BookTruck.</p>
+
+    <div class="roles" role="group" aria-label="Choose account type">
+      <button type="button" class="role selected" data-role="customer" aria-pressed="true">
+        <span class="radio"></span><span class="emoji">📦</span><strong>Customer</strong><small>Book a truck and manage shipments</small>
+      </button>
+      <button type="button" class="role" data-role="driver" aria-pressed="false">
+        <span class="radio"></span><span class="emoji">🚚</span><strong>Driver</strong><small>Accept delivery jobs and update progress</small>
+      </button>
+    </div>
+    <p class="role-note" id="roleNote">You selected a customer account.</p>
+
+    <div class="tabs" role="tablist" aria-label="Login or sign up">
+      <button type="button" class="tab active" data-mode="login" role="tab" aria-selected="true">Log in</button>
+      <button type="button" class="tab" data-mode="signup" role="tab" aria-selected="false">Sign up</button>
+    </div>
+
+    <form id="authForm" class="form">
+      <div class="field" id="nameField" hidden>
+        <label for="fullName">Full name</label>
+        <input id="fullName" name="fullName" autocomplete="name" placeholder="Enter your full name">
+      </div>
+      <div class="field">
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+      </div>
+      <div class="field" id="phoneField" hidden>
+        <label for="phone">Phone number</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Enter your phone number">
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" minlength="8" placeholder="At least 8 characters" required>
+      </div>
+      <div class="field" id="confirmField" hidden>
+        <label for="confirmPassword">Confirm password</label>
+        <input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" minlength="8" placeholder="Enter password again">
+      </div>
+      <div class="message" id="message" role="status"></div>
+      <button class="primary" type="submit" id="submitButton">Log in as Customer</button>
+      <p class="terms">By continuing, you agree to use BookTruck responsibly. This is the account-selection UI; secure account creation and login need a backend.</p>
+    </form>
+  </section>
+</main>
+<footer>© BookTruck · Transport made simpler</footer>
+
+
+<script type="module">
+  import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+
+  const supabase = createClient(
+    'https://nwqwaoqpgmbrxtxvkwwy.supabase.co',
+    'sb_publishable_yE3CqlJYegtJNYuRq9LzmQ_SLzP4njg'
+  );
+
+  let selectedRole = 'customer';
+  let selectedMode = 'login';
+  const $ = id => document.getElementById(id);
+
+  function showMessage(text) {
+    $('message').textContent = text;
+    $('message').classList.add('show');
+  }
+
+  function updateUI() {
+    const roleName = selectedRole === 'driver' ? 'Driver' : 'Customer';
+    const signup = selectedMode === 'signup';
+
+    document.querySelectorAll('[data-role]').forEach(button => {
+      const selected = button.dataset.role === selectedRole;
+      button.classList.toggle('selected', selected);
+      button.setAttribute('aria-pressed', String(selected));
+    });
+
+    document.querySelectorAll('[data-mode]').forEach(button => {
+      const selected = button.dataset.mode === selectedMode;
+      button.classList.toggle('active', selected);
+      button.setAttribute('aria-selected', String(selected));
+    });
+
+    $('heading').textContent = signup ? 'Create your account' : 'Welcome back';
+    $('lead').textContent = signup
+      ? `Sign up as a ${roleName.toLowerCase()} to get started.`
+      : `Log in to your ${roleName.toLowerCase()} account.`;
+
+    $('roleNote').textContent = `You selected a ${roleName.toLowerCase()} account.`;
+
+    $('nameField').hidden = !signup;
+    $('phoneField').hidden = !signup;
+    $('confirmField').hidden = !signup;
+
+    $('fullName').required = signup;
+    $('phone').required = signup;
+    $('confirmPassword').required = signup;
+    $('password').autocomplete = signup ? 'new-password' : 'current-password';
+    $('submitButton').textContent = signup
+      ? `Sign up as ${roleName}`
+      : `Log in as ${roleName}`;
+
+    $('message').classList.remove('show');
+    $('message').textContent = '';
+  }
+
+  document.querySelectorAll('[data-role]').forEach(button => {
+    button.addEventListener('click', () => {
+      selectedRole = button.dataset.role;
+      updateUI();
+    });
+  });
+
+  document.querySelectorAll('[data-mode]').forEach(button => {
+    button.addEventListener('click', () => {
+      selectedMode = button.dataset.mode;
+      updateUI();
+    });
+  });
+
+  $('authForm').addEventListener('submit', async event => {
+    event.preventDefault();
+
+    const email = $('email').value.trim();
+    const password = $('password').value;
+    const signup = selectedMode === 'signup';
+
+    $('submitButton').disabled = true;
+    $('submitButton').textContent = 'Please wait...';
+    $('message').classList.remove('show');
+
+    try {
+      if (signup) {
+        if (password !== $('confirmPassword').value) {
+          showMessage('Passwords do not match.');
+          $('confirmPassword').focus();
+          return;
+        }
+
+        const { data, error } = await supabase.auth.signUp({
+          email,
+          password,
+          options: {
+            data: {
+              full_name: $('fullName').value.trim(),
+              phone: $('phone').value.trim(),
+              role: selectedRole
+            },
+            emailRedirectTo: window.location.origin + '/index.html'
+          }
+        });
+
+        if (error) throw error;
+
+        if (data.session) {
+          showMessage('Account created! Opening BookTruck...');
+          window.location.href = './index.html';
+        } else {
+          showMessage(
+            'Account created. Check your email to confirm your account, then log in.'
+          );
+        }
+      } else {
+        const { data, error } = await supabase.auth.signInWithPassword({
+          email,
+          password
+        });
+
+        if (error) throw error;
+
+        const savedRole = data.user.user_metadata?.role;
+
+        if (savedRole && savedRole !== selectedRole) {
+          await supabase.auth.signOut();
+          showMessage(`This account is registered as ${savedRole}. Select the correct account type.`);
+          return;
+        }
+
+        showMessage('Login successful! Opening BookTruck...');
+        window.location.href = './index.html';
+      }
+    } catch (error) {
+      showMessage(error.message || 'Something went wrong. Please try again.');
+    } finally {
+      $('submitButton').disabled = false;
+      updateUI();
+    }
+  });
+
+  updateUI();
+</script>
+</body>
+</html>

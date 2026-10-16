@@ -1,0 +1,126 @@
+:root{--navy:#071c38;--orange:#ff7918;--ink:#142941;--muted:#708196;--line:#e2e9f1;--paper:#f4f7fb}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink)}a{text-decoration:none;color:inherit}button,input,select{font:inherit}.topbar{height:78px;background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:0 6%;position:sticky;top:0;z-index:10;color:white;box-shadow:0 7px 24px #06162b25}.brand{display:flex;align-items:center;gap:10px;color:white}.brand-mark{font-size:34px;font-weight:900;color:var(--orange);letter-spacing:-8px;margin-right:8px;transform:skew(-12deg)}.brand-name{display:block;font-size:23px;line-height:1;font-weight:900;letter-spacing:-1px}.brand-name>span{color:var(--orange)}.brand-name small{display:block;font-size:7px;letter-spacing:1px;color:#bbcade;margin-top:6px;font-weight:700}.topbar nav{display:flex;gap:25px;align-items:center;font-size:12px;color:#d9e3ee}.topbar nav a:hover{color:var(--orange)}.nav-cta{padding:11px 15px;border:1px solid #ffffff55;border-radius:8px}.menu-toggle{display:none;background:none;color:white;border:0;font-size:24px}.hero{background:radial-gradient(ellipse at 80% 40%,#234c70,transparent 36%),linear-gradient(115deg,#06162d,#0a2b4e 65%,#071a32);color:white;min-height:610px;padding:75px 7% 45px;display:grid;grid-template-columns:.95fr 1.05fr;align-items:center;gap:20px;position:relative;overflow:hidden}.eyebrow{font-size:10px;font-weight:850;letter-spacing:1.8px;color:var(--orange)}.live-dot{display:inline-block;width:7px;height:7px;background:#43d69b;border-radius:50%;margin-right:7px}h1{font-size:clamp(44px,5vw,69px);line-height:1.02;letter-spacing:-3px;margin:23px 0}h1 em,h2 em{font-style:normal;color:var(--orange)}.hero-copy>p,.tracking-copy>p{max-width:440px;font-size:14px;line-height:1.8;color:#c1cfdd}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 37px}.button{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:14px 19px;border:0;border-radius:9px;font-size:12px;font-weight:850;cursor:pointer;transition:transform .2s,box-shadow .2s}.button-orange{background:linear-gradient(120deg,#ff6810,#ff9b22);color:white;box-shadow:0 8px 20px #ff79182b}.button-outline{border:1px solid #ffffff55;color:white}.button:hover{transform:translateY(-2px)}.button:disabled{opacity:.6;cursor:wait;transform:none}.hero-stats{display:flex;gap:25px}.hero-stats div{display:grid;gap:5px}.hero-stats b{font-size:19px;color:var(--orange)}.hero-stats span{font-size:10px;color:#c0cddd}.hero-art{height:380px;position:relative;display:flex;align-items:center;justify-content:center}.hero-art:before{content:"";position:absolute;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,#ff8a2530,transparent 70%)}.route-chip{position:absolute;top:12px;right:2%;z-index:3;padding:12px 14px;border:1px solid #ffffff27;background:#0c2c4bdd;border-radius:10px;color:var(--orange);font-size:10px;letter-spacing:1px}.route-chip small{display:block;color:#d1dce7;letter-spacing:0;margin-top:5px}.truck-illustration{position:relative;display:flex;align-items:flex-end;filter:drop-shadow(0 22px 15px #0008);z-index:2}.trailer{width:235px;height:126px;background:linear-gradient(135deg,#185487,#09203b);border:2px solid #75a3c9;border-radius:6px 3px 3px 3px;display:flex;align-items:center;justify-content:center;flex-direction:column}.trailer strong{font-size:24px}.trailer strong span{color:var(--orange)}.trailer small{font-size:7px;letter-spacing:2px;color:#ffab4c;margin-top:6px}.truck-cab{height:143px;width:112px;margin-left:-1px;position:relative;background:linear-gradient(100deg,#0a2c4e,#2b6c9d 52%,#09203b);border:2px solid #83b3d6;border-radius:18px 25px 5px 4px;clip-path:polygon(0 0,70% 5%,100% 40%,100% 100%,0 100%)}.windshield{position:absolute;right:11px;top:19px;width:62px;height:46px;background:linear-gradient(135deg,#a4c6d8,#07182b 75%);border:3px solid #09213b;border-radius:7px 12px 4px 4px;transform:skewY(8deg)}.grill{position:absolute;right:7px;bottom:20px;width:70px;height:24px;border:2px solid #07182c;border-radius:4px;background:repeating-linear-gradient(0deg,#9fb8c9 0 3px,#12324e 3px 6px)}.headlight{position:absolute;right:4px;bottom:50px;width:10px;height:8px;background:#ffd16a;border-radius:4px}.truck-wheels{position:absolute;bottom:-13px;left:25px;width:295px;display:flex;justify-content:space-between}.truck-wheels i{width:28px;height:28px;border:7px solid #1b2632;background:#8da2b5;border-radius:50%;box-shadow:0 0 0 3px #050d16}.floating-card{position:absolute;bottom:9px;left:1%;z-index:4;background:white;color:var(--ink);border-radius:12px;padding:13px;display:flex;align-items:center;gap:10px;box-shadow:0 15px 35px #0004}.pin{font-size:25px;color:var(--orange)}.floating-card b,.floating-card small{display:block}.floating-card b{font-size:11px}.floating-card small{font-size:9px;color:var(--muted);margin-top:4px}.check{font-size:12px;background:#dff7eb;border-radius:50%;padding:5px;color:#07995e}.hero-foot{position:absolute;bottom:15px;left:7%;right:7%;display:flex;justify-content:space-between;font-size:9px;color:#91a8c0;letter-spacing:.5px}.section{width:min(1160px,88%);margin:auto;padding:76px 0}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:26px}.section-heading h2,.steps-section h2{font-size:clamp(29px,3.2vw,42px);letter-spacing:-1.5px;color:var(--navy);margin:10px 0 0}.section-heading>p{font-size:12px;line-height:1.8;color:var(--muted);max-width:320px;margin:0}.booking-form{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;padding:24px;border:1px solid var(--line);border-radius:16px;box-shadow:0 18px 55px #0a2d530b}.booking-form label{display:flex;flex-direction:column;gap:8px;font-size:11px;font-weight:800;color:#354a61}.booking-form input,.booking-form select,.tracking-form input{width:100%;min-width:0;padding:13px 12px;border:1px solid #dfe6ef;border-radius:8px;background:#f9fbfe;font:inherit;font-size:12px;color:var(--ink)}.booking-form input:focus,.booking-form select:focus,.tracking-form input:focus{outline:2px solid #ffb37c;outline-offset:1px}.full-width{grid-column:1/-1}.submit-button{align-self:end;min-height:42px}.form-note{grid-column:1/-1;color:#8b98a8;font-size:10px;margin:0}.result-card{margin-top:14px;padding:15px 17px;background:#eafaf2;border:1px solid #bcebd3;color:#075e3d;border-radius:10px;font-size:12px;line-height:1.8;overflow-wrap:anywhere}.result-card.error{background:#fff1ed;border-color:#ffd0c2;color:#8b2c16}.result-card button{margin:8px 0 0}.result-card dl{display:grid;grid-template-columns:140px 1fr;gap:7px;margin:12px 0 0}.result-card dt{color:#62788c}.result-card dd{margin:0;font-weight:700}.fleet-section,.steps-section{background:var(--paper)}.fleet-inner{padding-top:72px;padding-bottom:80px}.text-link{font-size:11px;font-weight:800}.truck-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.truck-card{background:white;border:1px solid #e5ebf3;border-radius:14px;padding:16px;position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s}.truck-card:hover{transform:translateY(-4px);box-shadow:0 17px 38px #0b2d5315}.truck-emoji{height:108px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:61px;margin-bottom:16px}.blue-bg{background:linear-gradient(135deg,#edf5fc,#d8e8f8)}.gray-bg{background:linear-gradient(135deg,#f0f3f7,#dce4ef)}.peach-bg{background:linear-gradient(135deg,#fff0e4,#ffdec4)}.dark-bg{background:linear-gradient(135deg,#e4eaf2,#c6d4e5)}.truck-card>small{font-size:8px;letter-spacing:1px;color:#8a9aae;font-weight:900}.truck-card h3{font-size:17px;margin:8px 0 5px;color:var(--navy)}.truck-card p{font-size:10px;color:var(--muted);margin-bottom:17px}.truck-card>a{display:block;border-top:1px solid #edf1f6;padding-top:13px;color:var(--orange);font-size:10px;font-weight:900}.featured-card{border-color:#ffc091}.popular-label{position:absolute;right:0;top:0;padding:7px;background:var(--orange);color:white;border-radius:0 13px 0 8px;font-size:8px;font-weight:900}.tracking-section{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:center}.tracking-copy h2{font-size:clamp(38px,4vw,55px);line-height:1.04;letter-spacing:-2px;color:var(--navy);margin:15px 0}.tracking-copy>p{color:var(--muted)}.tracking-form{display:flex;gap:8px;margin-top:22px}.tracking-form input{flex:1}.tracking-form .button{white-space:nowrap}.muted-note{display:block;color:#97a2b1;font-size:10px;line-height:1.7;margin-top:14px}.map-card{padding:14px;border:1px solid var(--line);border-radius:18px;box-shadow:0 23px 60px #0b2d5313}.map-topline{display:flex;justify-content:space-between;padding:7px 5px 14px;font-size:8px;letter-spacing:1px;color:#718398;font-weight:900}.map-topline b{padding:7px;background:#eaf1fa;border-radius:6px;color:#315577}.map-preview{height:315px;border-radius:11px;overflow:hidden;position:relative;background-color:#e9f1f3;background-image:linear-gradient(32deg,transparent 48%,#c8dbe0 49%,#c8dbe0 50%,transparent 51%),linear-gradient(120deg,transparent 48%,#c8dbe0 49%,#c8dbe0 50%,transparent 51%);background-size:120px 100px,145px 130px}.map-preview:before{content:"";position:absolute;width:130%;height:60px;left:-10%;top:48%;background:#b5dfe8;transform:rotate(-28deg);border-radius:50%}.map-preview svg{position:absolute;inset:0;width:100%;height:100%}.map-label{position:absolute;font-size:8px;font-weight:900;letter-spacing:1px;color:#59758a}.label-delhi{left:15%;top:14%}.label-agra{right:19%;top:26%}.label-jaipur{left:30%;top:39%}.label-kota{left:29%;bottom:18%}.map-truck{position:absolute;left:50%;top:50%;font-size:24px;transform:rotate(-20deg)}.map-note{position:absolute;bottom:13px;left:13px;padding:12px 14px;background :#ffffffed;border:1px solid #e1e9ed;border-radius:10px}.map-note b,.map-note small{display:block}.map-note b{font-size:10px}.map-note small{font-size:8px;color:#7d8b99;margin-top:4px}.steps-section .section{padding-top:70px;padding-bottom:76px}.steps-section h2{margin-bottom:25px}.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.steps-grid article{padding:23px;background:#fff;border:1px solid #e4eaf2;border-radius:14px}.steps-grid article>b{display:inline-flex;width:35px;height:35px;align-items:center;justify-content:center;background:#fff0e4;color:var(--orange);border-radius:9px;font-size:11px}.steps-grid h3{font-size:16px;margin:18px 0 8px;color:var(--navy)}.steps-grid p{font-size:11px;line-height:1.8;color:var(--muted);margin:0}footer{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;padding:27px 6%;background:var(--navy);color:#8fa6bf}footer p,footer>small{font-size:9px}@media(max-width:950px){.hero{padding-left:5%;padding-right:5%}.trailer{width:180px;height:105px}.truck-cab{width:95px;height:125px}.truck-wheels{width:240px}.truck-cards{grid-template-columns:repeat(2,1fr)}.booking-form{grid-template-columns:repeat(2,minmax(0,1fr))}.topbar nav{gap:13px}.tracking-section{gap:28px}}@media(max-width:700px){.topbar{height:69px}.brand-name{font-size:21px}.menu-toggle{display:block}.topbar nav{display:none;position:absolute;top:69px;left:0;right:0;background:var(--navy);padding:20px 6% 25px;flex-direction:column;align-items:stretch;gap:18px}.topbar nav.open{display:flex}.hero{display:block;padding:50px 6% 25px}.hero h1{font-size:47px}.hero-copy>p{font-size:13px}.hero-art{height:290px;margin-top:22px;transform:scale(.9)}.hero-foot{position:static;display:flex;flex-direction:column;gap:7px;line-height:1.5}.hero-stats{gap:17px}.hero-stats span{font-size:9px}.section{width:88%;padding:55px 0}.section-heading{align-items:flex-start;flex-direction:column}.section-heading>p{max-width:100%}.booking-form{grid-template-columns:1fr;padding:16px}.truck-cards{gap:10px}.truck-card{padding:11px}.truck-emoji{height:82px;font-size:48px}.truck-card h3{font-size:14px}.tracking-section{grid-template-columns:1fr;gap:25px}.map-preview{height:270px}.steps-section .section{padding:55px 0}.steps-grid{grid-template-columns:1fr}.tracking-form{flex-direction:column}.tracking-form .button{width:100%}footer{align-items:flex-start;flex-direction:column;padding:26px 6%;gap:8px}}@media(max-width:390px){.truck-cards{grid-template-columns:1fr}.hero h1{font-size:41px}.hero-art{transform:scale(.76);margin-left:-25px;margin-right:-25px}.result-card dl{grid-template-columns:1fr;gap:2px}.result-card dd{margin-bottom:7px}}
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 12px 5%;
+  background: #ffffff;
+}
+
+.brand img {
+  display: block;
+  width: 240px;
+  max-width: 70vw;
+  height: auto;
+}
+
+.hero-branding {
+  display: flex;
+  justify-content: center;
+  padding: 25px 16px;
+}
+
+.main-logo {
+  width: 320px;
+  max-width: 90%;
+  height: auto;
+  object-fit: contain;
+}
+
+.brand{
+    display: flex;
+    align-items:center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 280px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.main-logo {
+  width: 280px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* BookTruck second logo in hero section */
+.hero-art.hero-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  overflow: visible;
+}
+
+.hero-art.hero-logo img {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  object-fit: contain;
+  mix-blend-mode: screen;
+}
+
+@media (max-width: 768px) {
+  .hero-art.hero-logo img {
+    max-width: 340px;
+  }
+}
+
+/* Fix booking tracking input */
+.tracking-form {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  width: 100%;
+}
+
+.tracking-form input {
+  flex: 1;
+  min-width: 0;
+  width: auto;
+  box-sizing: border-box;
+  padding: 16px;
+  font-size: 16px;
+  color: #071c38;
+  background: #ffffff;
+  border: 1px solid #d8e1eb;
+  border-radius: 12px;
+}
+
+.tracking-form input:focus {
+  outline: 2px solid #ff7918;
+  outline-offset: 2px;
+}
+
+.tracking-form button {
+  flex: 0 0 120px;
+  width: auto;
+  margin-top: 0;
+}
+
+@media (max-width: 480px) {
+  .tracking-form {
+    flex-wrap: wrap;
+  }
+
+  .tracking-form input,
+  .tracking-form button {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+}
